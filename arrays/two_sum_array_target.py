@@ -1,3 +1,5 @@
+# Array pair sum, given a array list find the pair that adds upto the target.
+
 def twoSum(nums, target):
     """
     :type nums: List[int]
@@ -17,5 +19,24 @@ def twoSum(nums, target):
             output.add(num)
             print(f" printing out {output}")
 
+def twoSum2(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
 
-print(twoSum([3,2,4], 6))
+    output = {}
+    for i in range(len(nums)):
+
+        print(f"printing num {nums}")
+        k = target - nums[i]
+        if k in output:
+
+            return [output[k], i]
+        else:
+            output[nums[i]] = i
+            print(f" printing out {output}")
+
+
+print(twoSum2([3,2,4], 6))
