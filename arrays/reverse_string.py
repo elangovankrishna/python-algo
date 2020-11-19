@@ -12,7 +12,16 @@ Output: ["o","l","l","e","h"]
 
 class Solution:
     def reverseString(self, s) -> None:
+
         for i in range(int(len(s)/2)):
             temp = s[i]
+            print(len(s) - i - 1)
             s[i] = s[len(s) - i - 1]
             s[len(s) - i - 1] = temp
+
+        return s
+
+
+st = Solution()
+
+print(st.reverseString(s=["s","t","r","i"]))
